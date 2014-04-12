@@ -17,6 +17,8 @@ for url in [
     'http://hotscoops.co/',
     'http://sanityvalve.com/',
     'http://bldm.us/',
+    'http://giantasshole.com/',
+    'http://nivi.org.uk/',
 ]:
     def check(self):
         requests.get(url)
