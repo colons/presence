@@ -3,3 +3,4 @@ requests
 unittest2
 ndg-httpsclient
 pyasn1
+beautifulsoup4
