@@ -57,6 +57,9 @@ for expected_title, urls in [
     ('irc.biz.ru:6697', [
         'http://ggj14.colons.co/',
     ]),
+    ('lp', [
+        'http://lp.colons.co/',
+    ]),
     ('Music | Sanity Valve', [
         'http://sanityvalve.com/',
         'http://www.sanityvalve.com/',
