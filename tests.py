@@ -81,6 +81,14 @@ for expected_title, urls in [
         'http://giantasshole.com/',
         'http://www.giantasshole.com/',
     ]),
+    ("Very Scary Scenario", [
+        'http://vscary.co/',
+        'https://vscary.co/',
+    ]),
+    ("Extraction Chamber", [
+        'http://ec.vscary.co/',
+        'https://ec.vscary.co/',
+    ]),
 ]:
     for url in urls:
         PresenceTest.add_check(url, expected_title)
