@@ -4,6 +4,11 @@ from bs4 import BeautifulSoup
 import requests
 
 
+UA = (
+    'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) '
+    'Chrome/41.0.2228.0 Safari/537.36'
+)
+
 class PresenceTest(TestCase):
     """
     Make sure everything is still up.
@@ -12,9 +17,11 @@ class PresenceTest(TestCase):
     @classmethod
     def add_check(cls, url, expected_title):
         def check(self):
+            resp = requests.get(url, headers={'user-agent': UA})
+
             got_title, = [
                 e.text for e in
-                BeautifulSoup(requests.get(url).text).select('title')
+                BeautifulSoup(resp.text).select('title')
             ]
             self.assertEqual(
                 got_title.strip(), expected_title,
