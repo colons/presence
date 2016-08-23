@@ -84,7 +84,7 @@ for expected_title, urls in [
         'http://www.hotscoops.co/',
         'https://hotscoops.co/',
     ]),
-    ("Vinny's profile", [
+    ("vinny's profile", [
         'http://giantasshole.com/',
         'http://www.giantasshole.com/',
     ]),
