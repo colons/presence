@@ -21,7 +21,7 @@ class PresenceTest(TestCase):
 
             got_title, = [
                 e.text for e in
-                BeautifulSoup(resp.text).select('title')
+                BeautifulSoup(resp.text, "html.parser").select('title')
             ]
             self.assertEqual(
                 got_title.strip(), expected_title,
